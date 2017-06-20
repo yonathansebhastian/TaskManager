@@ -18,7 +18,7 @@ class CreateTasksTable extends Migration
           $table->string('name');
           $table->date('start_date');
           $table->date('due_date');
-          $table->boolean('status')->default(1);
+          $table->smallInteger('status')->default(1);
           $table->smallInteger('priority')->default(8);
           $table->text('description');
           $table->timestamps();

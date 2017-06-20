@@ -6,6 +6,8 @@ This app is made using Laravel and AdminLTE package. It contains simple and easy
 
 ## See it live on Heroku!
 [TaskManager](https://quiet-sands-90756.herokuapp.com/)
+Username: admin@mail.com
+password: password
 
 ## License
 This is open sourced software without any warranty from developer.
