@@ -33,7 +33,7 @@
         <div class="col-md-4">
           <div class="form-group">
               <label for="name">Start Date *</label>
-              <input type="text" name="start_date" class="form-control" value="{{date('d-m-Y', strtotime($data['start_date']))}}" required>
+              <input type="text" name="start_date" class="date form-control" value="{{date('d-m-Y', strtotime($data['start_date']))}}" required>
           </div>
           <div class="form-group">
               <label for="start_date">Priority *</label>
@@ -47,7 +47,7 @@
         <div class="col-md-4">
           <div class="form-group">
               <label for="name">Due Date *</label>
-              <input type="text" name="due_date" class="form-control" value="{{date('d-m-Y', strtotime($data['due_date']))}}" required>
+              <input type="text" name="due_date" class="date form-control" value="{{date('d-m-Y', strtotime($data['due_date']))}}" required>
           </div>
         </div>
         <div class="col-md-12">
@@ -70,4 +70,15 @@
 </div>
 @endsection
 @section('script')
+<script>
+$(document).ready(function(){
+  $('.date').datepicker({
+    todayBtn: "linked",
+    keyboardNavigation: false,
+    forceParse: false,
+    autoclose: true,
+    format: "dd-mm-yyyy"
+  });
+});
+</script>
 @endsection
