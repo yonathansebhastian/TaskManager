@@ -16,7 +16,7 @@ class Controller extends BaseController
   public function __construct()
   {
     date_default_timezone_set('Asia/Bangkok');
-    $datav['dueTasks'] = Task::whereDay('due_date', date('d'))->where('status','!=','2')->get();
+    $datav['dueTasks'] = Task::whereDay('due_date', date('d'))->whereNotIn('status', [2])->get();
     $datav['status'] = [
         0 => 'Open',
         1 => 'In Progress',
